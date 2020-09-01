@@ -6,3 +6,6 @@ If the task is over, the user can delete the task by clicking on the close butto
 
 To visit the webpage go to this link
 https://vikastripathi-27.github.io/Kanban-board/index.html
+
+Working of the webpage
+https://youtu.be/rDIMchhkdjg
