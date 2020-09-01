@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <title>Kanban Board</title>
+  </head>
+  <body>
+    <div id="myDIV" class="header">
+      <h2 style="margin:5px">To Do</h2>
+      <input type="text" id="myInput" placeholder="Enter the task you have to do...">
+      <span onclick="newElement()" class="addBtn">Add task</span>
+    </div>
+    <br><hr><br>
+    <ul id="myUL">
+      
+    </ul>
+    <br><hr><br><br>
+
+    <div id="myDIV1" class="header">
+      <h2 style="margin:5px">Doing</h2>
+      <input type="text" id="myInput1" placeholder="Enter the task you are doing...">
+      <span onclick="newElement1()" class="addBtn">Add task</span>
+    </div>
+    <br><hr><br>
+    <ul id="myUL1">
+      
+    </ul>
+    <br><hr><br><br>
+
+    <div id="myDIV2" class="header">
+      <h2 style="margin:5px">Done</h2>
+      <input type="text" id="myInput2" placeholder="Enter the task you have done...">
+      <span onclick="newElement2()" class="addBtn">Add task</span>
+    </div>
+    <br><hr><br>
+    <ul id="myUL2">
+      
+    </ul>
+    <br><hr><br>
+    
+    <script>
+    
+    var myNodelist = document.getElementsByTagName("LI");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    var close = document.getElementsByClassName("close");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+    function newElement() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("Enter something!");
+      } else {
+        document.getElementById("myUL").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+
+    function newElement1() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput1").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("Enter something!");
+      } else {
+        document.getElementById("myUL1").appendChild(li);
+      }
+      document.getElementById("myInput1").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+
+    function newElement2() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput2").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("Enter something!");
+      } else {
+        document.getElementById("myUL2").appendChild(li);
+      }
+      document.getElementById("myInput2").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+    </script>
+  </body>
+</html>

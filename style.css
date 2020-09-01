@@ -1,0 +1,101 @@
+body {
+margin: 0;
+min-width: 250px;
+}
+
+* {
+box-sizing: border-box;
+}
+
+ul {
+margin: 0;
+padding: 0;
+}
+
+ul li {
+cursor: pointer;
+position: relative;
+padding: 12px 8px 12px 40px;
+list-style-type: none;
+background: #eee;
+font-size: 18px;
+transition: 0.2s;
+background: -webkit-linear-gradient(to right, #434343, #000000);  
+background: linear-gradient(to right, #434343, #000000);
+color: #ffffff;
+margin-bottom: 20px;
+}
+
+ul li:hover {
+background: #ddd;
+color: #000000;
+}
+
+.close {
+position: absolute;
+right: 0;
+top: 0;
+padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+background: #000000;
+color: #ffffff;
+}
+
+.header {
+background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); 
+background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+padding: 30px 40px;
+color: white;
+text-align: center;
+font-family: 'Roboto', sans-serif;
+}
+
+#myInput {
+margin-top: 20px;
+margin-bottom: 15px;
+font-family: 'Roboto', sans-serif;
+}
+#myInput1 {
+margin-top: 20px;
+margin-bottom: 15px;
+font-family: 'Roboto', sans-serif;
+}
+#myInput2 {
+margin-top: 20px;
+margin-bottom: 15px;
+font-family: 'Roboto', sans-serif;
+}
+
+.header:after {
+content: "";
+display: table;
+clear: both;
+}
+
+input {
+margin: 0;
+border: none;
+border-radius: 0;
+width: 75%;
+padding: 10px;
+float: left;
+font-size: 16px;
+}
+
+.addBtn {
+padding: 10px;
+width: 25%;
+background: -webkit-linear-gradient(to right, #434343, #000000); 
+background: linear-gradient(to right, #434343, #000000);
+color: #ffffff;
+float: left;
+text-align: center;
+font-size: 16px;
+cursor: pointer;
+transition: 0.3s;
+border-radius: 0;
+font-family: 'Roboto', sans-serif;
+margin-top: 20px;
+}
